@@ -21,46 +21,71 @@ def area(long_lad):
     altura = round(resta**(1/2),5)
     area = round(long_lad*altura/2,2)
     return area
-
+def creartxt(texto):
+    archivo=open(texto+".txt",'w')
+    archivo.close()
+    
+def grabartxt(texto,contenido_a, contenido_b):
+    archi =open(texto+".txt","a")
+    archi.write(contenido_a)
+    archi.write(contenido_b)
+    archi.close()
+    
 def menu():
     try:
         num_lad = int(input("Número de lados: "))
         if num_lad >= 3 and num_lad <=10:
+            contador = 0
             long_lad = float(input("Longitud de un lado: "))
             if num_lad == 3:
                 print("La figura es un triangulo")
                 area_fig = area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
-                
+                creartxt("triangulo"+str(contador))
+                grabartxt("triangulo"+str(contador),str(area_fig),str(perimetro_fig))
+                contador = contador +1
             elif num_lad == 4:
                 print("La figura es un cuadrado")
                 area_fig = long_lad**2
                 perimetro_fig = perimetro(num_lad,long_lad)
+                creartxt("cuadrado"+str(contador))
+                contador = contador +1
             elif num_lad == 5:
                 print("La figura es un pentagono")
                 area_fig = num_lad*area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
-
+                creartxt("pentagono"+str(contador))
+                contador = contador +1
             elif num_lad == 6:
                 print("La figura es un hexagono")
                 area_fig = num_lad*area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
+                creartxt("hexagono"+str(contador))
+                contador = contador +1
             elif num_lad == 7:
                 print("La figura es un hectagono")
                 area_fig = num_lad*area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
+                creartxt("heptagono"+str(contador))
+                contador = contador +1
             elif num_lad == 8:
                 print("La figura es un octagono")
                 area_fig = num_lad*area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
+                creartxt("octagono"+str(contador))
+                contador = contador +1
             elif num_lad == 9:
                 print("La figura es un nonagono")
                 area_fig = num_lad*area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
+                creartxt("nonagono"+str(contador))
+                contador = contador +1
             elif num_lad == 10:
                 print("La figura es un decagono")
                 area_fig = num_lad*area(long_lad)
                 perimetro_fig = perimetro(num_lad,long_lad)
+                creartxt("decagono"+str(contador))
+                contador = contador +1
             print("El Area de la figura es:",area_fig," y el perimetro es: ",perimetro_fig)
             repetir()
             menu()
