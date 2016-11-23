@@ -7,6 +7,6 @@ def contador():
         contador = contador+1
         linea = archivo.readline()
     archivo.close()
-    print("Numero de lineas: "contador)
+    print("Numero de lineas: ",contador)
 
 contador()
