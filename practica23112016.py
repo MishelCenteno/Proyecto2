@@ -4,9 +4,9 @@ def creartxt():
     
 def grabartxt():
     archi =open("practica.txt","a")
-    archi.write("Mishel Centeno")
-    archi.write("Josue Cando")
-    archi.write("Programacion Avanzada")
+    archi.write("Mishel Centeno\n")
+    archi.write("Josue Cando\n")
+    archi.write("Programacion Avanzada\n")
     archi.close()
 def leertxt():
     archivo=open('practica.txt','r')
