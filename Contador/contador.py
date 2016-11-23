@@ -5,8 +5,8 @@ def contador():
     contador = 0
     while linea != "":
         contador = contador+1
-        linea = archi.readline()
+        linea = archivo.readline()
     archivo.close()
-    print(contador)
+    print("Numero de lineas: "contador)
 
 contador()
