@@ -8,6 +8,7 @@ def grabartxt():
     archi.write("Josue Cando\n")
     archi.write("Programacion Avanzada\n")
     archi.close()
+    
 def leertxt():
     archivo=open('practica.txt','r')
     linea=archivo.readline()
@@ -15,7 +16,10 @@ def leertxt():
         print (linea)
         linea=archivo.readline()
     archivo.close()
-
+    
+def leertxtenlista():
+    archivo=open('practica.txt','r')
+    lineas=archi
 creartxt()
 grabartxt()
 leertxt()
