@@ -1,6 +1,10 @@
 def factorar1(a,b,c):
     x1 = (-b + ((b**2)-(4*a*c))**(1/2))/(2*a)
     return x1
+def archivo(texto):
+    archivo = open("resultado.txt")
+    archivo.write(texto)
+    lineas = archivo.readlines()
 
 def main():
     a = int(input("a: "))
