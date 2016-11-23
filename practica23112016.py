@@ -19,7 +19,10 @@ def leertxt():
     
 def leertxtenlista():
     archivo=open('practica.txt','r')
-    lineas=archi
+    lineas=archivo.readlines()
+    print(lineas)
+    archivo.close()
 creartxt()
 grabartxt()
 leertxt()
+leertxtenlista()
