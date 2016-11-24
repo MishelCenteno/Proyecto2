@@ -5,7 +5,7 @@ def lectura():
     linea = archivo.readline()
     while linea !="":
         eliminar = linea.replace("\n","")
-        separar = eliminar.split(" ")
+        separar = eliminar.split()
         elementos.append(separar)
         print (linea)
         linea = archivo.readline()
